@@ -1,18 +1,4 @@
-from curses.ascii import isdigit
 from os import system
-import emoji
-
-"""
-Welcome Message.
-"""
-def welcome():
-
-    print("""**********************************************************
-Welcome to gitlab/github ssh and gpg keys manager program
-
-by Murendwa Ratshitimba
-**********************************************************
-    """)
 
 
 """
@@ -53,11 +39,12 @@ def valid_bits():
             print("Please specify valid digits")
 
 
+"""
+    Generate ssh key 
+"""
 def generate_ssh_key():
 
-    """
-    Generate ssh key 
-    """
+    
 
     algorithims = ["ED25519", "RSA", "ECDSA"]
     
@@ -93,20 +80,9 @@ def generate_ssh_key():
             ssh_key_command(algorithims[2])
 
         else:
+            
 
             print("""
 ****************
 Invalid Option
 ****************\n""")
-
-
-def main():
-
-    # welcome the user
-    welcome()
-    generate_ssh_key()
-
-
-if __name__ == "__main__":
-
-    main()
