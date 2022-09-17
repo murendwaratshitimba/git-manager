@@ -67,17 +67,20 @@ def generate_ssh_key():
         if algorithim == "1":
 
             ssh_key_command(algorithims[0])
+            break
 
         elif algorithim == "2":
 
             bit_size = valid_bits()
             ssh_key_command_bits(algorithims[1], bit_size)
+            break
 
             
 
         elif algorithim == "3":
 
             ssh_key_command(algorithims[2])
+            break
 
         else:
             
