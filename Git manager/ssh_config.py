@@ -11,25 +11,22 @@ def configureAccount():
 
     config_file.close()
 
-    
-    
     config_file = open(home_directory + "/.ssh/config", "w")
-
-    host = input("HostName: ").lower()
-    user = input("gitlab/github username: ").lower()
-    ssh_path = input("Private Key Path: ").lower()
+    
+    host = input("HostName: ").lower().strip()
+    user = input("gitlab/github username: ").lower().strip()
+    ssh_key_name = input("Private Key name: ").lower().strip()
 
     # configure
 
     configure = """Host {0}
-
     HostName {0}
     User {1}
-    IdentityFile ~{2}
+    IdentityFile ~/.ssh/{2}
     
-    """.format(host, user, ssh_path)
+    """.format(host, user, ssh_key_name)
 
-    config_file.write(configure)
+    config_file.write("\r" + configure)
     config_file.write(content)
     config_file.close()
 

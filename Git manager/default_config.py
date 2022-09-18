@@ -24,3 +24,16 @@ Host *
 
         config_file.close()
 
+def default_ssh_directory():
+
+    home_directory = os.path.expanduser("~")
+
+    if os.path.exists(home_directory + "/.ssh"):
+
+        pass
+    
+    else:
+
+        os.system("mkdir " + home_directory + "/.ssh") 
+        print("done")
+
