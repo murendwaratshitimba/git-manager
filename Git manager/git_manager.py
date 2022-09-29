@@ -38,11 +38,13 @@ def commands():
     4. config ssh- configure ssh 
     5. config gpg
     6. view ssh - ssh pub key
-    7. viw gpg - gpg pub key
+    7. view gpg - gpg pub key
     8. ssh passwd
     9. gpg passwd
     10. quit - quit the program
     \n""")
+
+    # reset the text color
     print(Style.RESET_ALL)
 
 

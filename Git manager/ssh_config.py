@@ -15,7 +15,7 @@ def configureAccount():
     
     host = input("HostName: ").lower().strip()
     user = input("gitlab/github username: ").lower().strip()
-    ssh_key_name = input("Private Key name: ").lower().strip()
+    ssh_key_name = input("ssh file name: ").lower().strip()
 
     # configure
 
