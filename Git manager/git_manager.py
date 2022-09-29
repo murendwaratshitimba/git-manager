@@ -9,6 +9,7 @@ from view_gpg import view_gpg_public_key
 from change_gpg_password import change_gpg_password
 from default_config import *
 from change_ssh_key_password import change_ssh_key_password
+import webbrowser
 
 
 """
@@ -41,7 +42,8 @@ def commands():
     7. view gpg - gpg pub key
     8. ssh passwd
     9. gpg passwd
-    10. quit - quit the program
+    10. tut - git manager tutorial videos
+    11. quit - quit the program
     \n""")
 
     # reset the text color
@@ -100,6 +102,10 @@ def main():
         elif mode == "gpg passwd":
 
             change_gpg_password()
+
+        elif mode == "tut":
+            
+            webbrowser.open("https://youtube.com/playlist?list=PL7io6mkQl2_vC1mWl-0YYvmYerZH5QTF7")
 
         elif mode == "quit":
 
